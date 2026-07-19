@@ -32,12 +32,13 @@ img {
    min-height: 10vh;
    padding: 0 25px;
    box-sizing: border-box;
-   background-color: var(--background-nav);
-   box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.5);
-   -webkit-backdrop-filter: var(--backdrop-filter);
-   backdrop-filter: var(--backdrop-filter);
-   transition: 0.35s ease;
-   border-radius: 15px;
+   background: linear-gradient(180deg, rgba(149, 215, 255, 0.24), rgba(22, 57, 96, 0.16));
+   box-shadow: none;
+   border: none;
+   -webkit-backdrop-filter: blur(16px) saturate(140%);
+   backdrop-filter: blur(16px) saturate(140%);
+   transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+   border-radius: 20px;
    width: fill;
    margin: 15px;
    z-index: 100;
@@ -87,8 +88,12 @@ img {
    font-family: "Inter", sans-serif;
    font-style: normal;
    text-decoration: none;
-   transition: all 0.2s ease;
+   transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.25s ease, text-shadow 0.25s ease;
    transform: translateX(0%);
+}
+
+.f-nav-right .navbar-link:hover {
+   text-shadow: 0 0 16px rgba(186, 231, 255, 0.9);
 }
 
 @media (orientation: portrait) {

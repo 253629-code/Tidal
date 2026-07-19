@@ -51,6 +51,10 @@ if (!inFrame && !navigator.userAgent.includes("Firefox") && localStorage.getItem
 }
 // Particles
 document.addEventListener("DOMContentLoaded", event => {
+  if (!window.localStorage.getItem("Particles")) {
+    window.localStorage.setItem("Particles", "true");
+  }
+
   if (window.localStorage.getItem("Particles") === "true") {
     const particlesConfig = {
       particles: {
@@ -169,7 +173,7 @@ document.addEventListener("DOMContentLoaded", event => {
 const SplashT = [
   "Over 8 Million Users since 2023",
   "Fastest growing proxy server",
-  "Made by xBubbo",
+  "Made by Colin Dehart with help from Josh Boudreau",
   "Check out discord.gg/interstellar :)",
   "Thanks for using the site",
   "Follow us on Tiktok (@useinterstellar)",

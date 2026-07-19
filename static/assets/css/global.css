@@ -3,28 +3,28 @@
 
 :root {
    /* Background Variables */
-   --background-image: url("/./assets/media/background/full-main.png"); /* Background Image */
+   --background-image: linear-gradient(180deg, #08111f 0%, #02040a 100%); /* Background Image */
    --backdrop-filter: blur(10px) brightness(80%); /* Nav Backdrop filter */
-   --background-nav: rgba(255, 255, 255, 0.02); /* Nav Background */
-   --background-color: #222; /* Main Background Color */
-   --background-input: #4545459e; /* Input Field Background Color */
-   --background-column: #353535; /* Background for Apps Container */
-   --background-settings: #2a2a2a; /* Settings Card Background */
-   --background-buttons: #333; /* Button Background Color */
-   --tab-active-background: #444; /* Accent Color for Tabs */
+   --background-nav: rgba(140, 200, 255, 0.24); /* Nav Background */
+   --background-color: #07111d; /* Main Background Color */
+   --background-input: rgba(188, 230, 255, 0.14); /* Input Field Background Color */
+   --background-column: #0e1d32; /* Background for Apps Container */
+   --background-settings: #0b1728; /* Settings Card Background */
+   --background-buttons: #1d4f7d; /* Button Background Color */
+   --tab-active-background: #7ec6ff; /* Accent Color for Tabs */
    --tab-inactive-background: ; /* Background Color for Tabs Not In Use */
-   --slider-active-background: #4caf50; /* Active Slider Background Color */
-   --slider-inactive-background: #ccc; /*  Slider Background Color */
+   --slider-active-background: #8ad6ff; /* Active Slider Background Color */
+   --slider-inactive-background: #7f8aa0; /*  Slider Background Color */
    --nav-image: url("/./assets/media/favicon/main.png"); /* Nav Logo */
    /* Text Variables */
-   --text-primary: #fff; /* Primary Text Color */
-   --text-dark: #555; /* Dark Text Color for Error Page, Scrollbar, and Particles */
-   --text-placeholder: #aaa; /* Placeholder Text Color */
+   --text-primary: #f1f9ff; /* Primary Text Color */
+   --text-dark: #9cd2ff; /* Dark Text Color for Error Page, Scrollbar, and Particles */
+   --text-placeholder: #b8dfff; /* Placeholder Text Color */
    /* Other Variables */
-   --save-button: #4caf50; /* Save Button, Typically Green */
-   --reset-button: #f44336; /* Reset Button, Typically Red */
-   --import-button: #009688; /* Import Button, Typically Teal */
-   --export-button: #ea76cb; /* Export Button, Typically Pink */
+   --save-button: #7fd0ff; /* Save Button, Typically Light Blue */
+   --reset-button: #ff7a8b; /* Reset Button, Typically Red */
+   --import-button: #5fc7ff; /* Import Button, Typically Light Blue */
+   --export-button: #a6ddff; /* Export Button, Typically Pale Blue */
 }
 
 ::-webkit-scrollbar {
@@ -41,7 +41,7 @@
 ::-webkit-scrollbar-thumb {
    border-radius: 10px;
    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-   background-color: var(--text-primary);
+   background: linear-gradient(180deg, #c7edff 0%, #74b8ff 100%);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -52,11 +52,24 @@ body {
    font-family: "Inter", sans-serif;
    text-decoration: none;
    background: var(--background-image);
-   height: 100%;
+   color: var(--text-primary);
+   min-height: 100vh;
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
    background-attachment: fixed;
+   overflow-x: hidden;
+}
+
+body::before {
+   content: "";
+   position: fixed;
+   inset: 0;
+   pointer-events: none;
+   background:
+      radial-gradient(circle at top left, rgba(143, 214, 255, 0.22), transparent 30%),
+      radial-gradient(circle at bottom right, rgba(105, 148, 255, 0.2), transparent 28%);
+   z-index: -1;
 }
 
 ::placeholder {
@@ -75,4 +88,6 @@ body {
    top: 0%;
    position: absolute;
    z-index: 99;
+   backdrop-filter: blur(2px);
 }
+
